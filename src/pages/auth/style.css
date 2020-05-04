@@ -1,0 +1,134 @@
+.signin-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/login-background.jpg');
+  background-size: cover;
+  position: relative;
+}
+.form-box {
+  position: absolute;
+  width: 380px;
+  height: 480px;
+  background-color: white;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 30px black;
+  overflow: hidden;
+}
+
+.form-box .button-box {
+  margin: 2rem auto;
+  text-align: center;
+  width: 220px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  position: relative;
+}
+
+.toggle-btn {
+  padding: 15px 30px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+#translate-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 100px;
+  transition: 0.5s;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  z-index: 2;
+}
+
+#translate-btn.right {
+  left: 50%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 30px;
+}
+.social-icons a:nth-child(2) {
+  background-color: dodgerblue;
+}
+.social-icons a:nth-child(1) {
+  background-color: red;
+}
+.form-login, .form-register {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.form-register {
+  margin-top: 0;
+}
+
+.form-login input[type="text"], .form-login input[type="password"] {
+  margin: 10px 20px;
+  width: 256px;
+  border: none;
+  background: none;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+.remember-box {
+  width: 282px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.form-login input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-login button {
+  border: none;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border-radius: 100px;
+  padding: 10px 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-login button:active {
+  transform: scale(0.9);
+}
+
+.form-login button:focus {
+  outline: none;
+}
