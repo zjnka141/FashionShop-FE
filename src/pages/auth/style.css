@@ -8,7 +8,7 @@
 .form-box {
   position: absolute;
   width: 380px;
-  height: 480px;
+  height: 520px;
   background-color: white;
   border-radius: 5px;
   top: 50%;
@@ -100,6 +100,7 @@
   padding: 10px;
   border-bottom: 1px solid grey;
   outline: none;
+  transition: 0.2s;
 }
 .remember-box {
   width: 282px;
@@ -131,4 +132,19 @@
 
 .form-login button:focus {
   outline: none;
+}
+
+.form-field h6{
+  font-size: 12px;
+  margin-left: 27px;
+  color: red;
+}
+
+.form-field.error input {
+  border-color: red;
+  border-width: 2px;
+}
+
+.form-field.error input::placeholder {
+  color: rgba(255, 0, 0, 0.671);
 }
