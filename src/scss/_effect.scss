@@ -1,0 +1,18 @@
+.my-node-enter {
+  opacity: 0!important;
+  transform: translateX(-100%);
+}
+.my-node-enter-active, .my-node-enter-done {
+  opacity: 1!important;
+  transform: translateX(0)!important;
+  transition: 1s;
+}
+.my-node-exit {
+  opacity: 1!important;
+  transform: translateX(0);
+}
+.my-node-exit-active, .my-node-exit-done {
+  opacity: 0!important;
+  transform: translateX(-100%)!important;
+  transition: 1s;
+}

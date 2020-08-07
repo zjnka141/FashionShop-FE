@@ -28,7 +28,7 @@ const MyNavbar = () => {
         </div>
         <ul className={classnames("nav-items", {expand})}>
           {fakeMenus.map(e => (
-            <li className="nav-item">
+            <li className="nav-item" onClick={() => setExpand(false)}>
               <NavLink className="nav-link" to={"/"+e}>{e}</NavLink>
             </li>
           ))}

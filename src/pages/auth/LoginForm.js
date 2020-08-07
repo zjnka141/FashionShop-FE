@@ -5,8 +5,9 @@ import './style.css';
 import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 import { Typography } from '@material-ui/core';
-import axios from 'axios';
 import TextInputField from '../../components/common/TextInputField';
+import {useDispatch, useSelector} from 'react-redux';
+import {loginUser} from '../../store/actions/authenticationActions';
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
@@ -14,21 +15,20 @@ const SignupSchema = Yup.object().shape({
     .max(50, 'Tên đăng nhập tối đa 50 ký tự')
     .required('Vui lòng nhập trường này!'),
   password: Yup.string()
-    .min(6, 'Mật khẩu tối thiểu 6 ký tự')
+    .min(5, 'Mật khẩu tối thiểu 5 ký tự')
     .max(50, 'Mật khẩu tối đa 50 ký tự')
     .required('Vui lòng nhập trường này!'),
 });
 export const LoginForm = (props) => {
+  const dispatch =useDispatch();
+  const user = useSelector(state => state.auth);
+  console.log('USER', user);
   return (
     <Formik
       initialValues={{ username: '' }}
       validationSchema={SignupSchema}
       onSubmit={(values) => {
-        // same shape as initial values
-        axios
-          .post('http://localhost:8080/auth/login', values)
-          .then((res) => console.log('RES', res))
-          .catch((err) => console.log('err', err));
+        dispatch(loginUser(values));
       }}
     >
       {(props) => {
@@ -40,7 +40,6 @@ export const LoginForm = (props) => {
           handleBlur,
           handleSubmit,
         } = props;
-        console.log('FFFF', props);
         return (
           <form className="form-login" onSubmit={handleSubmit}>
             <div

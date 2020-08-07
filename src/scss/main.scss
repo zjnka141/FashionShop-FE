@@ -1,1 +1,17 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 @import './_navbar.scss';
+@import './_slider.scss';
+@import './_effect.scss';
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

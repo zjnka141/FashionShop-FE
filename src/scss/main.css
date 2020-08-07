@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -27,6 +31,10 @@
 .navbar .nav-container .nav-logo:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.navbar .nav-container .nav-logo img {
+  height: 40px;
 }
 
 .navbar .nav-container .nav-items {
@@ -72,7 +80,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.navbar.scrolled .nav-container > * {
+.navbar.scrolled .nav-container ul:not(.expand) li {
   line-height: 80px;
   font-size: 15px;
 }
@@ -95,6 +103,10 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 
@@ -137,13 +149,26 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: white;
+    height: auto;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
+  .navbar .nav-container .nav-container li {
+    line-height: 80px;
+    font-size: 15px;
+  }
+  .navbar .nav-container .nav-logo img {
+    height: 25px;
+  }
   .navbar .nav-container .nav-logo {
     height: 36px;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-right: auto;
+  }
+  .navbar .nav-container .nav-logo img {
+    height: 25px;
   }
   .navbar .nav-container .nav-items {
     display: -webkit-box;
@@ -166,7 +191,7 @@
     overflow: hidden;
   }
   .navbar .nav-container .nav-items.expand {
-    max-height: 250px;
+    max-height: 400px;
     overflow-y: auto;
   }
 }
@@ -185,5 +210,123 @@
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
+}
+
+.description-enter {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  opacity: 0;
+}
+
+.description-enter-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.description-exit {
+  opacity: 1;
+}
+
+.description-exit-active {
+  opacity: 0;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.title-enter {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  opacity: 0;
+}
+
+.title-enter-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.title-exit {
+  opacity: 1;
+}
+
+.title-exit-active {
+  opacity: 0;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.button-enter {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  opacity: 0;
+}
+
+.button-enter-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+.button-exit {
+  opacity: 1;
+}
+
+.button-exit-active {
+  opacity: 0;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+.my-node-enter {
+  opacity: 0 !important;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.my-node-enter-active, .my-node-enter-done {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.my-node-exit {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.my-node-exit-active, .my-node-exit-done {
+  opacity: 0 !important;
+  -webkit-transform: translateX(-100%) !important;
+          transform: translateX(-100%) !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */

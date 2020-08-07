@@ -1,0 +1,55 @@
+//Description
+.description-enter {
+  transform: translateX(-500px);
+  opacity: 0;
+}
+.description-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s ease-in;
+}
+.description-exit {
+  opacity: 1;
+}
+.description-exit-active {
+  opacity: 0;
+  transition: 1s ease-in;
+}
+//Title
+.title-enter {
+  transform: translateX(-500px);
+  opacity: 0;
+}
+.title-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s ease-in;
+  transition-delay: 500ms;
+}
+.title-exit {
+  opacity: 1;
+}
+.title-exit-active {
+  opacity: 0;
+  transition: 1s ease-in;
+  transition-delay: 500ms;
+}
+//Button
+.button-enter {
+  transform: translateX(-500px);
+  opacity: 0;
+}
+.button-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s ease-in;
+  transition-delay: 1000ms;
+}
+.button-exit {
+  opacity: 1;
+}
+.button-exit-active {
+  opacity: 0;
+  transition: 1s ease-in;
+  transition-delay: 1000ms;
+}

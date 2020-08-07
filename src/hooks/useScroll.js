@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 
-const useScroll = (offset) => {
+const useScroll = (offset = 50) => {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () =>
