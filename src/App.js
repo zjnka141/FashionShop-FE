@@ -37,19 +37,19 @@ function App() {
     <div className="App">
       <ShowSnackbar />
       <Router history={history}>
-        {/* <Navbar /> */}
-        {/* <IntroSlider /> */}
+        <Navbar />
+        <IntroSlider />
         {/* <Banner /> */}
-        {/* <Products /> */}
-        <Switch>
+        <Products />
+        {/* <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={SignInSignUp} />
           <Route exact path="/service" component={Services} />
           <Route exact path="/saveToken" component={SaveToken} />
-        </Switch>
+        </Switch> */}
       </Router>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
